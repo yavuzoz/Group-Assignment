@@ -1,0 +1,139 @@
+
+let classA = [{
+    Name: "Marco ",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Laura",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Marco ",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Laura",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Francesca",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Antuan",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Flippo",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Lisa",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}]
+    
+let classB = [{
+    Name: "MIRCO",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Mircan",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Leyla",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Hüsamettin",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Aydin",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Cüneyt",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}]
+   
+let classC = [{
+    Name: "Hüseyin",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Hasan",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Veli",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Laura",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Deli",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Aragon",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}, {
+    Name: "Elf",
+    Matematik: 80,
+    Fizik: 50,
+    Kimya: 75,
+    Geometri: 89,
+}, {
+    Name: "Cengiz",
+    Matematik: 100,
+    Fizik: 80,
+    Kimya: 70,
+    Geometri: 98,
+}]
+   
