@@ -1,9 +1,9 @@
 
 
-let allFizikNot = pClass.map((person) => person.Fizik);
-let allMatematikNot = pClass.map((person) => person.Matematik);
-let allKimyaNot = pClass.map((person) => person.Kimya);
-let allGeometriNot = pClass.map((person) => person.Geometri);
+let allFizikNot = classA.map((person) => person.Fizik);
+let allMatematikNot = classA.map((person) => person.Matematik);
+let allKimyaNot = classA.map((person) => person.Kimya);
+let allGeometriNot = classA.map((person) => person.Geometri);
 
 let avarageLessons = (eleman, toplam) => eleman + toplam;
 let resultFizik = allFizikNot.reduce(avarageLessons) / allFizikNot.length;
@@ -11,16 +11,10 @@ let resultMatematik = allMatematikNot.reduce(avarageLessons) / allMatematikNot.l
 let resultKimya = allKimyaNot.reduce(avarageLessons) / allKimyaNot.length;
 let resultGeometri = allGeometriNot.reduce(avarageLessons) / allGeometriNot.length;
 
-let lessonsAvarage = {
-  Matematik: resultMatematik,
-  Fizik: resultFizik,
-  Kimya : resultKimya,
-  Geometri : resultGeometri
-}
 
 
-function createTotalAvarage(pClass) {
-  return pClass `
+function createTotalAvarage() {
+  return  `
   <p class="text-primary">CLASS AVERAGES</p>
   <hr class="text-primary">
   <div class="col mb-5 align-items-center">
@@ -47,11 +41,9 @@ function createLessons(pClass) {
         </div>
     `).join("");
 }
-
-
-function createMainFragment(pClass) {
+function createNavbar(){
   return `
-  <div class="container-fluid m-2 p-3 bg-primary">
+  
   <ul class="nav justify-content-end">
     <li class="nav-item">
       <a class="nav-link active text-white" aria-current="page" href="#"
@@ -59,7 +51,7 @@ function createMainFragment(pClass) {
       >
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+      <a class="nav-link text-white" aria-current="page" onclick="getPageHome()" href="#">Home</a>
     </li>
     <li class="nav-item">
       <a class="nav-link text-white" onclick="getPage(classA)" href="#">Class A</a>
@@ -71,10 +63,15 @@ function createMainFragment(pClass) {
       <a class="nav-link text-white" onclick="getPage(classC)" href="#">Class C</a>
     </li>
   </ul>
-</div>
 
-<!-- Navbar End -->
+  `
+}
 
+function createMainFragment(pClass) {
+  return `
+  <div id="navbar" class="container-fluid m-2 p-3 bg-primary">
+  ${createNavbar()}
+  </div>
 <!-- Main Start -->
 <section class="container">
   <div id="classNames" class="container mt-5">
@@ -89,6 +86,46 @@ function createMainFragment(pClass) {
   ${createTotalAvarage(pClass)}
 </div>
   `;
+}
+
+function createHomePage() {
+  return `
+  <div class="container-fluid m-2 p-3 bg-primary">
+            
+        </div>
+        <div class="container mt-8">
+            <p class="text-primary">ALL REPORTS</p>
+            <hr class="text-primary">
+        </div>
+        <div class="row mt-8 align-items-center m-10 " id="html-container">
+            <div class="col-lg-5 " style="text-align: center;">
+                <div id="chart-class-a-average">
+                </div>
+                <canvas id="chart-class-a" style="width:25%;max-width:600px"></canvas>
+
+                <p style="color:rgb(172, 199, 254) ;">REPORT OF CLASS A</p>
+            </div>
+
+            <div class="col-lg-5 " style="text-align: center;">
+                <div id="chart-class-b-average">
+                </div>
+                    <canvas id="chart-class-b" style="width:25%;max-width:600px"></canvas>
+                    <p style="color:rgb(172, 199, 254) ;">REPORT OF CLASS B</p>
+            </div>
+            <div class="col-lg-5" style="text-align: center;">
+                <div id="chart-class-c-average">
+                </div>
+                    <canvas id="chart-class-c" style="width:25%;max-width:600px"></canvas>
+                    <p style="color:rgb(172, 199, 254) ;">REPORT OF CLASS C</p>       
+            </div> 
+            <div class="col-lg-5 " style="text-align: center;">
+                <div id="chart-class-all-average">
+                </div>
+                    <canvas id="chart-class-all" style="width:25%;max-width:600px"></canvas>
+                    <p style="color:rgb(172, 199, 254) ;">REPORT OF ALL CLASSES</p>
+            </div>
+        </div>
+  `
 }
 
 function getPage(pClass) {
@@ -109,3 +146,9 @@ function getPage(pClass) {
   appContainer.innerHTML = createMainFragment(pClass)
 }
 getPage(classC)
+
+function getPageHome() {
+  const appHomeContainer = document.querySelector("#container-main");
+  appHomeContainer.innerHTML = createHomePage()
+}
+getPageHome
