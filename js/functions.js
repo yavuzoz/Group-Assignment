@@ -1,18 +1,26 @@
-let lessonsAvarageFizik = classA.map((person) => person.Fizik);
-let lessonsAvarageMatematik = classA.map((person) => person.Matematik);
-let lessonsAvarageKimya = classA.map((person) => person.Kimya);
-let lessonsAvarageGeometri = classA.map((person) => person.Geometri);
+
+
+let allFizikNot = pClass.map((person) => person.Fizik);
+let allMatematikNot = pClass.map((person) => person.Matematik);
+let allKimyaNot = pClass.map((person) => person.Kimya);
+let allGeometriNot = pClass.map((person) => person.Geometri);
 
 let avarageLessons = (eleman, toplam) => eleman + toplam;
-let resultFizik = lessonsAvarageFizik.reduce(avarageLessons) / lessonsAvarageFizik.length;
-let resultMatematik = lessonsAvarageMatematik.reduce(avarageLessons) / lessonsAvarageMatematik.length;
-let resultKimya = lessonsAvarageKimya.reduce(avarageLessons) / lessonsAvarageKimya.length;
-let resultGeometri = lessonsAvarageGeometri.reduce(avarageLessons) / lessonsAvarageGeometri.length;
+let resultFizik = allFizikNot.reduce(avarageLessons) / allFizikNot.length;
+let resultMatematik = allMatematikNot.reduce(avarageLessons) / allMatematikNot.length;
+let resultKimya = allKimyaNot.reduce(avarageLessons) / allKimyaNot.length;
+let resultGeometri = allGeometriNot.reduce(avarageLessons) / allGeometriNot.length;
+
+let lessonsAvarage = {
+  Matematik: resultMatematik,
+  Fizik: resultFizik,
+  Kimya : resultKimya,
+  Geometri : resultGeometri
+}
 
 
-
-function createTotalAvarage() {
-  return `
+function createTotalAvarage(pClass) {
+  return pClass `
   <p class="text-primary">CLASS AVERAGES</p>
   <hr class="text-primary">
   <div class="col mb-5 align-items-center">
@@ -54,13 +62,13 @@ function createMainFragment(pClass) {
       <a class="nav-link text-white" aria-current="page" href="#">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white" onclick="getPage(${classA})" href="#">Class A</a>
+      <a class="nav-link text-white" onclick="getPage(classA)" href="#">Class A</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white" onclick="getPage(${classB})" href="#">Class B</a>
+      <a class="nav-link text-white" onclick="getPage(classB)" href="#">Class B</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-white" onclick="getPage(${classC})" href="#">Class C</a>
+      <a class="nav-link text-white" onclick="getPage(classC)" href="#">Class C</a>
     </li>
   </ul>
 </div>
@@ -85,5 +93,19 @@ function createMainFragment(pClass) {
 
 function getPage(pClass) {
   const appContainer = document.querySelector("#app");
+  appContainer.innerHTML = createMainFragment(pClass);
+ 
+}
+getPage(classA)
+
+function getPage(pClass) {
+  const appContainer = document.querySelector("#app");
   appContainer.innerHTML = createMainFragment(pClass)
 }
+getPage(classB)
+
+function getPage(pClass) {
+  const appContainer = document.querySelector("#app");
+  appContainer.innerHTML = createMainFragment(pClass)
+}
+getPage(classC)
