@@ -2,10 +2,10 @@
  * DOM API
  */
 
-const a = [80, 90, 70, 100, 0];
-const b = [50, 90, 70, 100, 0];
-const c = [80, 90, 60, 100, 0];
-const all = [80, 90, 70, 80, 0];
+const classALessonAvarage = [80, 90, 70, 100, 0];
+const classBLessonAvarage = [50, 90, 70, 100, 0];
+const classCLessonAvarage = [80, 90, 60, 100, 0];
+const allLessonAvarage = [80, 90, 70, 80, 0];
 
 const labels = ["Matematik", "Fizik", "Kimya", "Geometri"];
 
@@ -27,10 +27,10 @@ const renderChart = (pId, pData) => {
   });
 };
 
-renderChart("chart-class-a", a);
-renderChart("chart-class-b", b);
-renderChart("chart-class-c", c);
-renderChart("chart-class-all", all);
+renderChart("chart-class-a", classALessonAvarage);
+renderChart("chart-class-b", classBLessonAvarage);
+renderChart("chart-class-c", classCLessonAvarage);
+renderChart("chart-class-all", allLessonAvarage);
 
 function createPFragment() {
   return `

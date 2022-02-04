@@ -1,15 +1,15 @@
 
 let classA = [{
     Name: "Marco ",
-    Matematik: 80,
+    Matematik: 10,
     Fizik: 50,
     Kimya: 75,
     Geometri: 89,
 }, {
     Name: "Laura",
-    Matematik: 100,
+    Matematik: 0,
     Fizik: 80,
-    Kimya: 70,
+    Kimya: 0,
     Geometri: 98,
 }, {
     Name: "Marco ",
@@ -20,7 +20,7 @@ let classA = [{
 }, {
     Name: "Laura",
     Matematik: 100,
-    Fizik: 80,
+    Fizik: 8,
     Kimya: 70,
     Geometri: 98,
 }, {
@@ -66,11 +66,11 @@ let classB = [{
     Matematik: 80,
     Fizik: 50,
     Kimya: 75,
-    Geometri: 89,
+    Geometri: 8,
 }, {
     Name: "Hüsamettin",
     Matematik: 100,
-    Fizik: 80,
+    Fizik: 8,
     Kimya: 70,
     Geometri: 98,
 }, {
@@ -97,7 +97,7 @@ let classC = [{
     Name: "Hasan",
     Matematik: 100,
     Fizik: 80,
-    Kimya: 70,
+    Kimya: 0,
     Geometri: 98,
 }, {
     Name: "Veli",
@@ -115,7 +115,7 @@ let classC = [{
     Name: "Deli",
     Matematik: 80,
     Fizik: 50,
-    Kimya: 75,
+    Kimya: 52,
     Geometri: 89,
 }, {
     Name: "Aragon",
@@ -131,9 +131,9 @@ let classC = [{
     Geometri: 89,
 }, {
     Name: "Cengiz",
-    Matematik: 100,
+    Matematik: 70,
     Fizik: 80,
     Kimya: 70,
-    Geometri: 98,
+    Geometri: 18,
 }]
    
